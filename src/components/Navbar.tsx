@@ -36,7 +36,7 @@ const Navbar = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#home" className="text-2xl font-bold heading-gradient">
-            Limber<span className="text-tech-accent">Tolaba</span>
+            Limber<span className="text-tech-accent">DEV</span>
           </a>
           
           {/* Desktop Navigation */}

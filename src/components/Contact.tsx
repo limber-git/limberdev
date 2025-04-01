@@ -1,102 +1,124 @@
-
-import React, { useState } from 'react';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Github, 
-  Linkedin, 
+import React, { useState } from "react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Github,
+  Linkedin,
   Twitter,
-  Send
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/components/ui/use-toast';
+  Send,
+  Facebook,
+  FacebookIcon,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/components/ui/use-toast";
 
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const contactInfo = [
     {
       icon: <Mail className="text-tech-blue" />,
-      text: "limbertolaba@gmail.com",
-      href: "mailto:limbertolaba@gmail.com"
+      text: "limber.rodrigo.tj@gmail.com",
+      href: "mailto:limber.rodrigo.tj@gmail.com?subject=Interesado%20en%20tu%20trabajo&body=Hola%20Rodrigo,%20me%20gustaría%20hablar%20contigo%20sobre%20...",
     },
     {
       icon: <Phone className="text-tech-purple" />,
-      text: "+54 XXX XXX XXXX",
-      href: "tel:+54XXXXXXXXXX"
+      text: "+59174524859",
+      href: "tel:+59174524859",
     },
     {
       icon: <MapPin className="text-tech-accent" />,
-      text: "Argentina",
-      href: "#"
-    }
+      text: "Bolivia",
+      href: "https://www.google.com/maps/search/?api=1&query=Bolivia",
+    },
   ];
 
   const socialLinks = [
     {
       icon: <Github size={20} />,
-      href: "https://github.com/limbertolaba",
-      label: "GitHub"
+      href: "https://github.com/limber-git",
+      label: "GitHub",
     },
     {
       icon: <Linkedin size={20} />,
-      href: "https://linkedin.com/in/limbertolaba",
-      label: "LinkedIn"
+      href: "https://www.linkedin.com/in/limber--tolaba/",
+      label: "LinkedIn",
     },
     {
-      icon: <Twitter size={20} />,
-      href: "https://twitter.com/limbertolaba",
-      label: "Twitter"
-    }
+      icon: <FacebookIcon size={20} />,
+      href: "https://www.facebook.com/limber.tj0",
+      label: "Facebook",
+    },
   ];
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Mensaje enviado",
-        description: "Gracias por tu mensaje. Te responderé lo antes posible.",
+
+    try {
+      const response = await fetch("https://formspree.io/f/xpwpyakn", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
-      setFormData({ name: '', email: '', message: '' });
-      setIsSubmitting(false);
-    }, 1500);
+
+      if (response.ok) {
+        toast({
+          title: "Mensaje enviado",
+          description:
+            "Gracias por tu mensaje. Te responderé lo antes posible.",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        toast({ title: "Error", description: "No se pudo enviar el mensaje." });
+      }
+    } catch (error) {
+      toast({ title: "Error", description: "Hubo un problema con el envío." });
+    }
+
+    setIsSubmitting(false);
   };
 
   return (
     <section id="contact" className="section-padding">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">Contacto</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
+            Contacto
+          </h2>
           <p className="text-lg text-foreground/80">
-            ¿Interesado en trabajar juntos? Completa el formulario a continuación o contáctame directamente a través de mis canales de comunicación.
+            ¿Interesado en trabajar juntos? Completa el formulario a
+            continuación o contáctame directamente a través de mis canales de
+            comunicación.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2 space-y-8">
             <div>
-              <h3 className="text-xl font-bold mb-6 text-tech-blue">Información de Contacto</h3>
+              <h3 className="text-xl font-bold mb-6 text-tech-blue">
+                Información de Contacto
+              </h3>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
-                  <a 
-                    key={index} 
+                  <a
+                    key={index}
                     href={info.href}
                     className="flex items-center space-x-4 group"
                   >
@@ -112,13 +134,15 @@ const Contact = () => {
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-6 text-tech-purple">Redes Sociales</h3>
+              <h3 className="text-xl font-bold mb-6 text-tech-purple">
+                Redes Sociales
+              </h3>
               <div className="flex space-x-4">
                 {socialLinks.map((link, index) => (
-                  <a 
-                    key={index} 
-                    href={link.href} 
-                    target="_blank" 
+                  <a
+                    key={index}
+                    href={link.href}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-full bg-secondary hover:bg-tech-blue/20 text-foreground/80 hover:text-tech-blue transition-colors"
                     aria-label={link.label}
@@ -134,7 +158,10 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="tech-card p-6 rounded-xl">
               <div className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground/80">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium mb-2 text-foreground/80"
+                  >
                     Nombre
                   </label>
                   <Input
@@ -147,9 +174,12 @@ const Contact = () => {
                     className="bg-secondary/50 border-secondary/70"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2 text-foreground/80">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium mb-2 text-foreground/80"
+                  >
                     Email
                   </label>
                   <Input
@@ -163,9 +193,12 @@ const Contact = () => {
                     className="bg-secondary/50 border-secondary/70"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2 text-foreground/80">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium mb-2 text-foreground/80"
+                  >
                     Mensaje
                   </label>
                   <Textarea
@@ -179,9 +212,9 @@ const Contact = () => {
                     className="bg-secondary/50 border-secondary/70"
                   />
                 </div>
-                
-                <Button 
-                  type="submit" 
+
+                <Button
+                  type="submit"
                   disabled={isSubmitting}
                   className="bg-tech-blue hover:bg-tech-blue/90 text-white w-full"
                 >
