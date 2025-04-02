@@ -13,7 +13,7 @@ const About = () => {
       icon: <Code2 className="text-tech-blue" size={24} />,
       title: "Desarrollo Web",
       description:
-        "5+ años de experiencia en desarrollo fullstack con tecnologías modernas.",
+        "2+ años de experiencia en desarrollo fullstack con tecnologías modernas.",
     },
     {
       icon: <Globe className="text-tech-purple" size={24} />,

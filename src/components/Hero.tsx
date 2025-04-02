@@ -17,14 +17,11 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="flex flex-col space-y-6 animate-fade-in">
             <p className="text-tech-blue font-medium">
-              Desarrollador de Software
+              Software Developer
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
               <span className="heading-gradient">Limber Tolaba</span>
             </h1>
-            <h2 className="text-2xl md:text-3xl font-medium text-foreground/80">
-              Especialista en desarrollo web fullstack
-            </h2>
             <p className="text-lg md:text-xl text-foreground/60 max-w-xl">
               Construyo aplicaciones web modernas, escalables y optimizadas,
               utilizando tecnologías como React, Next.js, Node.js con Express,
