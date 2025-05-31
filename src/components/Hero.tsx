@@ -1,7 +1,6 @@
 import React from "react";
 import { ArrowDown, Code, Database, Server } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import LimberPicture from "@/assets/limberoper.jpg";
 
 const Hero = () => {
   return (
@@ -17,16 +16,14 @@ const Hero = () => {
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="flex flex-col space-y-6 animate-fade-in">
-            <p className="text-tech-blue font-medium">
-              Software Developer
-            </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
               <span className="heading-gradient">Limber Tolaba</span>
             </h1>
             <p className="text-lg md:text-xl text-foreground/60 max-w-xl">
-              Construyo aplicaciones web modernas, escalables y optimizadas,
-              utilizando tecnologías como React, Next.js, Node.js, ExpressJS,
-              ASP.NET Web API y bases de datos SQL como PostgreSQL, SQL Server.
+              Desarrollador de software especializado en la creación de
+              aplicaciones web modernas, optimizadas y escalables. Trabajo con
+              tecnologías como React, Next.js, Node.js, ExpressJS, ASP.NET Web
+              API y bases de datos SQL como PostgreSQL y SQL Server.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
@@ -76,7 +73,7 @@ const Hero = () => {
               {/* Imagen de perfil */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] rounded-full bg-gradient-to-br from-tech-blue to-tech-purple p-1">
                 <img
-                  src={LimberPicture}
+                  src="assets/limbeloper.jpg"
                   alt="profile"
                   className="w-full h-full object-cover rounded-full"
                 />

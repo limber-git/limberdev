@@ -29,8 +29,7 @@ const Projects = () => {
       title: "CBA Web Page",
       description:
         "Sitio web institucional del Centro Boliviano Americano, optimizado para accesibilidad y SEO.",
-      image:
-        "https://scontent.fvvi1-2.fna.fbcdn.net/v/t39.30808-6/482243320_1061107199378358_4983178273654563984_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=PPsz0uLc1YQQ7kNvgG22JsT&_nc_oc=AdleBo-MgPYhe0WWoKeZUJjU2mTXIMfcgT91FSP0Ubt4zpkHlpb8dMSN4q6e4sisraIduGgz4lRyWpL3GdHgarje&_nc_zt=23&_nc_ht=scontent.fvvi1-2.fna&_nc_gid=mJ7ByBgC9oWZJsazjqbaJw&oh=00_AYHQB7g-3xf1faN79X-ZdGkqhc-ifbqHqKPwhMyvZYVylA&oe=67F1FBD1", // Usa una imagen real
+      image: "https://i.ibb.co/5vfhNFc/American-Spaces-Image.png",
       tags: ["React + Vite", "Tailwind CSS", "Express.js", "PostgreSQL"],
       demoLink: "https://cba.org.bo/about", // Si tienes el link real
       codeLink: "", // Si no es público, deja "#"
@@ -75,9 +74,7 @@ const Projects = () => {
             Proyectos Destacados
           </h2>
           <p className="text-lg text-foreground/80">
-            Estos son algunos de mis proyectos más relevantes, que demuestran
-            mis habilidades técnicas y capacidad para desarrollar soluciones
-            completas.
+            Estos son algunos de mis proyectos más relevantes.
           </p>
         </div>
 

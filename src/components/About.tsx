@@ -43,11 +43,9 @@ const About = () => {
               Sobre Mí
             </h2>
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Soy un desarrollador de software, disfruto crear aplicaciones web
-              modernas, servicios y APIs escalables y optimizadas.Trabajo con
-              tecnologías de frontend y backend, disfrutando cada desafío que
-              implique resolver problemas complejos y diseñar soluciones
-              elegantes que mejoren la experiencia del usuario.
+              Desarrollo soluciones tecnológicas que combinan frontend y
+              backend, enfrentando cada desafío con creatividad y precisión para
+              optimizar la experiencia del usuario.
             </p>
           </div>
 
@@ -74,11 +72,10 @@ const About = () => {
                 Mi Enfoque
               </h3>
               <p className="text-foreground/80 leading-relaxed mb-6">
-                Me especializo en el desarrollo de soluciones tecnológicas
-                enfocadas en rendimiento, usabilidad y escalabilidad. Cada
-                proyecto que realizo busca no solo cumplir con los requisitos
-                técnicos, sino también ofrecer una experiencia de usuario
-                intuitiva y fluida.
+                Me enfoco en el desarrollo de soluciones tecnológicas enfocadas
+                en rendimiento, usabilidad y escalabilidad. Cada proyecto que
+                realizo busca no solo cumplir con los requisitos técnicos, sino
+                también ofrecer una experiencia de usuario intuitiva y fluida.
               </p>
               <p className="text-foreground/80 leading-relaxed">
                 Mantengo una mentalidad de aprendizaje continuo, explorando
@@ -95,9 +92,7 @@ const About = () => {
                 {/* Desarrollador Web Pasante - CBA */}
                 <div className="border-l-2 border-tech-blue/50 pl-6 relative">
                   <div className="absolute w-3 h-3 bg-tech-blue rounded-full -left-[7px] top-1"></div>
-                  <h4 className="font-semibold text-lg">
-                    Web Developer
-                  </h4>
+                  <h4 className="font-semibold text-lg">Web Developer</h4>
                   <p className="text-sm text-tech-blue mb-1">
                     2023 - 2024 | Centro Boliviano Americano (CBA)
                   </p>
