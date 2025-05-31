@@ -18,8 +18,7 @@ const About = () => {
     {
       icon: <Globe className="text-tech-purple" size={24} />,
       title: "APIs y Backend",
-      description:
-        "Especialista en ASP.Net Web API y servicios REST escalables.",
+      description: "ASP.Net Web API y servicios REST escalables.",
     },
     {
       icon: <Users className="text-tech-accent" size={24} />,
@@ -44,11 +43,11 @@ const About = () => {
               Sobre Mí
             </h2>
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Soy un desarrollador de software especializado en la creación de
-              aplicaciones web robustas y escalables. Con experiencia en
-              tecnologías de frontend y backend, disfruto resolviendo problemas
-              complejos y creando soluciones elegantes que brindan excelentes
-              experiencias a los usuarios.
+              Soy un desarrollador de software, disfruto crear aplicaciones web
+              modernas, servicios y APIs escalables y optimizadas.Trabajo con
+              tecnologías de frontend y backend, disfrutando cada desafío que
+              implique resolver problemas complejos y diseñar soluciones
+              elegantes que mejoren la experiencia del usuario.
             </p>
           </div>
 
@@ -75,15 +74,16 @@ const About = () => {
                 Mi Enfoque
               </h3>
               <p className="text-foreground/80 leading-relaxed mb-6">
-                Me apasiona la creación de soluciones tecnológicas que no solo
-                cumplen con los requisitos técnicos, sino que también ofrecen
-                una excelente experiencia de usuario. Busco siempre el
-                equilibrio entre código limpio, rendimiento y usabilidad.
+                Me especializo en el desarrollo de soluciones tecnológicas
+                enfocadas en rendimiento, usabilidad y escalabilidad. Cada
+                proyecto que realizo busca no solo cumplir con los requisitos
+                técnicos, sino también ofrecer una experiencia de usuario
+                intuitiva y fluida.
               </p>
               <p className="text-foreground/80 leading-relaxed">
-                Me mantengo constantemente actualizado con las últimas
-                tecnologías y mejores prácticas en desarrollo de software,
-                adaptándome rápidamente a nuevos frameworks y herramientas.
+                Mantengo una mentalidad de aprendizaje continuo, explorando
+                nuevas herramientas y mejores prácticas para adaptar mis
+                habilidades a los desafíos actuales del desarrollo de software.
               </p>
             </div>
 
@@ -96,7 +96,7 @@ const About = () => {
                 <div className="border-l-2 border-tech-blue/50 pl-6 relative">
                   <div className="absolute w-3 h-3 bg-tech-blue rounded-full -left-[7px] top-1"></div>
                   <h4 className="font-semibold text-lg">
-                    Desarrollador Web Becario
+                    Web Developer
                   </h4>
                   <p className="text-sm text-tech-blue mb-1">
                     2023 - 2024 | Centro Boliviano Americano (CBA)
@@ -151,14 +151,13 @@ const About = () => {
                     backend en NodeJS con Express y .NET.
                   </p>
                   <div className="mt-3 space-y-2">
-                    <p className="text-tech-blue font-semibold">
-                      Proyectos:
-                    </p>
+                    <p className="text-tech-blue font-semibold">Proyectos:</p>
 
                     <div className="pl-4 border-l-2 border-tech-blue/30">
                       <h5 className="font-medium">📌 Proyecto Portafolio</h5>
                       <p className="text-sm text-foreground/70">
-                        Aplicación informativa sobre mi experiancia laboral y habilidades.
+                        Aplicación informativa sobre mi experiancia laboral y
+                        habilidades.
                       </p>
                     </div>
                   </div>

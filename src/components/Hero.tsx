@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowDown, Code, Database, Server } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import LimberPicture from "@/assets/limberoper.jpg";
 
 const Hero = () => {
   return (
@@ -24,7 +25,7 @@ const Hero = () => {
             </h1>
             <p className="text-lg md:text-xl text-foreground/60 max-w-xl">
               Construyo aplicaciones web modernas, escalables y optimizadas,
-              utilizando tecnologías como React, Next.js, Node.js con Express,
+              utilizando tecnologías como React, Next.js, Node.js, ExpressJS,
               ASP.NET Web API y bases de datos SQL como PostgreSQL, SQL Server.
             </p>
 
@@ -75,7 +76,7 @@ const Hero = () => {
               {/* Imagen de perfil */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] rounded-full bg-gradient-to-br from-tech-blue to-tech-purple p-1">
                 <img
-                  src="https://scontent.fvvi1-2.fna.fbcdn.net/v/t39.30808-6/474199958_1128158028801812_1182256847767220147_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=sxAQ4LJEBxUQ7kNvgFhuhWn&_nc_oc=AdmM7TX-WEFan1cbAMpN08yi-E8zzemfz17nOy8znqwevcgyVOFBawEf8Fxhu4cg4RGUlO0zkCb_zhX8CnQ_rWfU&_nc_zt=23&_nc_ht=scontent.fvvi1-2.fna&_nc_gid=AEACToJyw9ff12HsIraKVw&oh=00_AYEW86r4tcbBaemVRmNllTEVgwnYUDSsLla-oNdS9HjTaw&oe=67F1FB8B"
+                  src={LimberPicture}
                   alt="profile"
                   className="w-full h-full object-cover rounded-full"
                 />

@@ -16,33 +16,34 @@ const Skills = () => {
       title: "Frontend",
       icon: <Monitor size={24} className="text-tech-blue" />,
       skills: [
-        { name: "React", level: 71 },
-        { name: "Angular", level: 51 },
-        { name: "ASP.NET", level: 61 },
-        { name: "NextJS", level: 63 },
-        { name: "JavaScript", level: 82 },
-        { name: "Tailwind CSS", level: 68 },
+        { name: "React", level: 55 },
+        { name: "Angular", level: 50 },
+        { name: "ASP.NET", level: 60 },
+        { name: "NextJS", level: 55 },
+        { name: "JavaScript", level: 70 },
+        { name: "Tailwind CSS", level: 65 },
       ],
     },
     {
       title: "Backend",
       icon: <Server size={24} className="text-tech-purple" />,
       skills: [
-        { name: "ASP.NET Web API", level: 73 },
-        { name: "C#", level: 75 },
+        { name: "ASP.NET Web API", level: 70 },
+        { name: "C#", level: 60 },
         { name: "Node.js", level: 60 },
-        { name: "REST APIs", level: 70 },
+        { name: "REST APIs", level: 65 },
       ],
     },
     {
       title: "Bases de Datos",
       icon: <Database size={24} className="text-tech-accent" />,
       skills: [
-        { name: "SQL Server", level: 85 },
-        { name: "MySQL", level: 80 },
+        { name: "SQL Server", level: 60 },
+        { name: "MySQL", level: 60 },
         { name: "MongoDB", level: 55 },
-        { name: "ORM (Entity Framework)", level: 85 },
-        { name: "PostgreSQL", level: 78 },
+        { name: "ORM (Entity Framework)", level: 60 },
+        { name: "ORM (Sequealize)", level: 65 },
+        { name: "PostgreSQL", level: 60 },
       ],
     },
     {
@@ -71,11 +72,6 @@ const Skills = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
             Mis Habilidades
           </h2>
-          <p className="text-lg text-foreground/80">
-            Mi conjunto de habilidades técnicas abarca el desarrollo fullstack
-            con enfoque en tecnologías modernas y escalables para crear
-            soluciones robustas.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
